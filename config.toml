@@ -4,18 +4,11 @@ base_url = "https://danielyaren.com"
 title = "Daniel Yaren"
 description = "I'm a software developer interested in open source, functional programming, Emacs and .NET"
 
-# Whether to automatically compile all Sass files in the sass directory
-compile_sass = true
-
-# Whether to do syntax highlighting
-highlight_code = true
-highlight_theme = "gruvbox-light"
-
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
 # nice lightspeed theme
-theme = "lightspeed"
+theme = "particle"
 
 [extra]
 netlify = true
