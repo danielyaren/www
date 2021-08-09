@@ -10,5 +10,8 @@ build_search_index = false
 # nice lightspeed theme
 theme = "particle"
 
+highlight_code = true
+highlight_theme = "dimmed-fluid"
+
 [extra]
 netlify = true

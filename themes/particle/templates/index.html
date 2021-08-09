@@ -43,13 +43,26 @@
   {% endblock head %}
 
   <body>
-    <main id="main" role="main">
+    <main id="main" role="main">     
       {% block content %}
+      <header class="tc pv4 pv2-ns georgia">
+        <h1 class="lh-copy pa1">Daniel Yaren</h1>
+        <p>{{config.description}}</p>
+      </header>
       <section class="mw7 center">
         {% for post in section.pages %}
           {{ macros::post_in_list(post=post) }}
         {% endfor %}
       </section>
+      <footer class="pv4 ph3 ph5-m ph6-l mid-gray georgia">
+        <div class="tc mt3">
+          <a href="https://twitter.com/danielyaren" title="Twitter" class="f6 dib ph2 link black dim">Twitter</a>
+          <a href="https://github.com/danielyaren" title="GitHub" class="f6 dib ph2 link black dim">GitHub</a>
+          <small class="f6 db mv2 tc black">
+            Made with <a href="https://www.getzola.org" class="black dim link" target="_blank" rel="noopener noreferrer">Zola</a> and <a href="https://tachyons.io" class="black dim link" target="_blank" rel="noopener noreferrer">Tachyons</a>
+          </small>
+        </div>
+      </footer>
       {% endblock content %}
     </main>
     {% block after_main %}

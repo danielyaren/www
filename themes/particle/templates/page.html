@@ -13,20 +13,24 @@
 {%- endblock ogimage %}
 
 {% block content %}
+
 <article>
-  <header class="bg-washed-yellow sans-serif">
+  <header class="{{ page.extra.header_color }} sans-serif">
     <div class="mw9 center pa4 pt5-ns ph7-l">
-      <time class="f6 mb2 dib ttu tracked" datetime="{{ page.date | date(format="%+") }}"><small>{{ page.date | date(format="%B %d, %Y") }}</small></time>
+      <a href="/" class="f6 mb2 link dim ttu tracked fr {{ page.extra.alt_text_color }}"><small>Back</small></a>
+      <time class="f6 mb2 dib ttu tracked {{ page.extra.alt_text_color }}" datetime="{{ page.date | date(format="%+") }}"><small>{{ page.date | date(format="%B %d, %Y") }}</small></time>
+
       <h3 class="f2 f1-m f-headline-l measure-narrow lh-title mv0">
-        <span class="red lh-copy pa1 tracked-tight">
+        <span class="{{ page.extra.text_color }} lh-copy pa1 tracked-tight">
           {{ page.title }}        
         </span>
       </h3>
-      <h5 class="f6 ttu tracked black-80">By {{ config.title }}</h5>
+      <h5 class="f6 ttu tracked {{ page.extra.alt_text_color }}">By {{ config.title }}</h5>
+      
     </div>
   </header>
-  <div class="pa4 ph7-l georgia mw9-l center f5 f3-ns lh-copy measure georgia"">
+  <div class="pa4 ph7-l georgia mw9-l center f5 f3-ns lh-copy measure">
       {{ page.content | safe }}
-</div>
+  </div>
 </article>
 {% endblock content %}

@@ -1,8 +1,8 @@
 {% macro post_in_list(post) %}
 <article class="pv4 bt bb b--black-10 ph3 ph0-l">
   <div class="flex flex-column flex-row-ns">
-    <div class="w-100 w-60-ns pr3-ns order-2 order-1-ns">
-      <a class="f3 athelas mt0 lh-title link hover-red black" href="{{ post.permalink | safe }}">{{ post.title }}</a></h1>
+    <div class="w-100 pr3-ns order-2 order-1-ns">
+      <a class="f3 athelas mt0 lh-title link black {{post.extra.hover_color}}" href="{{ post.permalink | safe }}">{{ post.title }}</a></h1>
       <br>
       <time style="font-size:90%;" datetime="{{ post.date | date(format="%+") }}">{{ post.date | date(format="%B %d, %Y") }}</time>
     </div>
