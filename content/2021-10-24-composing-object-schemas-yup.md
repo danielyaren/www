@@ -15,15 +15,15 @@ Logical schema groups were created by analysing the commonalities between each f
 
 ```javascript
 const personSchema = Yup.object({
-    title: Yup.string().required();
-    firstName: Yup.string().required();
-    lastName: Yup.string().required();
+    title: Yup.string().required(),
+    firstName: Yup.string().required(),
+    lastName: Yup.string().required()
 });
 
 const occupationSchema = Yup.object({
-    occupation: Yup.string().required();
-    partTime: Yup.bool().required();
-})
+    occupation: Yup.string().required(),
+    partTime: Yup.bool().required()
+});
 ```
 
 Then it's a simple case of creating an overall schema for each form:
@@ -36,7 +36,7 @@ const motorcycleSchema = Yup.object({
 
 const motorhomeSchema = Yup.object({
     ...personSchema,
-    belongsToCaravanClub: Yup.bool().required();
+    belongsToCaravanClub: Yup.bool().required()
 }).required();
 
 export { motorcycleSchema, motorhomeSchema }
@@ -46,7 +46,7 @@ export { motorcycleSchema, motorhomeSchema }
 Hook up the schema to your form (in this case, react-hook-form, which is amazing ❤️)
 
 ```javascript
-const { register, handleSubmit, formState:{ errors } } = useForm({
+const { register, handleSubmit, formState: { errors } } = useForm({
     resolver: yupResolver(motorcycleSchema)
 });
 ```
