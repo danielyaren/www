@@ -40,7 +40,6 @@ const motorhomeSchema = Yup.object({
 }).required();
 
 export { motorcycleSchema, motorhomeSchema }
-
 ```
 
 Hook up the schema to your form (in this case, react-hook-form, which is amazing ❤️)
