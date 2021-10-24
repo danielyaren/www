@@ -30,12 +30,12 @@ Then it's a simple case of creating an overall schema for each form:
 
 ```javascript
 const motorcycleSchema = Yup.object({
-    ...personSchema
+    ...personSchema,
     ...occupationSchema
 }).required();
 
 const motorhomeSchema = Yup.object({
-    ...personSchema
+    ...personSchema,
     belongsToCaravanClub: Yup.bool().required();
 });
 
