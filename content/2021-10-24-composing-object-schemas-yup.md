@@ -37,7 +37,7 @@ const motorcycleSchema = Yup.object({
 const motorhomeSchema = Yup.object({
     ...personSchema,
     belongsToCaravanClub: Yup.bool().required();
-});
+}).required();
 
 export { motorcycleSchema, motorhomeSchema }
 
