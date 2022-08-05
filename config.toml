@@ -2,7 +2,7 @@
 base_url = "https://danielyaren.com"
 
 title = "Daniel Yaren"
-description = "I'm a software developer interested in open source, functional programming, Emacs and .NET"
+description = "I'm a software developer interested in open source, functional programming, and .NET"
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
